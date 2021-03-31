@@ -1,0 +1,25 @@
+.title{
+    margin: 0 auto;
+    text-align: center;
+    background-color: red;
+}
+
+.container{
+    display: flex;
+    margin: 0 auto;
+    background-color: green;
+    width: 50%;
+    text-align: center;
+}
+
+.subContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: green;
+
+}
+.moonImg{
+    width: 150px;
+    height: 150px;
+}

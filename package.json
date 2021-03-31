@@ -10,5 +10,8 @@
     "'npm'"
   ],
   "author": "Lukas de Ruiter",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
