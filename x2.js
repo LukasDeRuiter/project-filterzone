@@ -22,6 +22,19 @@ let loadFile = (event) => {
     _output3.src = URL.createObjectURL(event.target.files[0]);
     _output4.src = URL.createObjectURL(event.target.files[0]);
     _output5.src = URL.createObjectURL(event.target.files[0]);
+    let reader = new FileReader();
+    reader.readAsDataURL(event.target.files[0]);
+    reader.onloadend = function (e) {
+        let img = new Image();
+        img.src = e.target.result;
+        img.onload = function(ev){
+            let canvas = document.getElementById('downloadImg');
+            let ctx = canvas.getContext('2d');
+            ctx.filter = "grayscale(100%)";
+            ctx.drawImage(img, 0, 0, img.height, img.width);
+            let imgData = canvas.toDataURL("image/jpeg",0.75);
+        }
+    }
 }
 
 document.getElementById('moon1').addEventListener('click', function(){
@@ -39,3 +52,5 @@ document.getElementById('moon4').addEventListener('click', function(){
 document.getElementById('moon5').addEventListener('click', function(){
     document.getElementById('moon5').style.webkitFilter = "invert(100%)";
 })
+
+
