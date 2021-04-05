@@ -7,7 +7,7 @@ document.querySelectorAll(".subContainer").forEach(subContainer => subContainer.
 }}))
 
 document.querySelectorAll(".subContainer").forEach(subContainer => subContainer.addEventListener('mouseleave', function(){
-    subContainer.style.backgroundColor = "green";
+    subContainer.style.backgroundColor = "rgb(80, 77, 241)";
 }))
 
 let imageHolder;
